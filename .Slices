@@ -1,0 +1,33 @@
+# Investigar sobre Slices
+#En Python, un "slice" (rebanada o trozo) es una notación que te permite acceder a un subconjunto de elementos en una secuencia, como una lista, una cadena o una tupla.
+#La sintaxis para realizar un slice es utilizando corchetes y dos puntos [:].
+
+#La notación de slices se utiliza para extraer una porción específica de una secuencia, en lugar de acceder a elementos individuales uno por uno.
+#Esto hace que sea más fácil trabajar con partes específicas de una secuencia de datos.
+
+#La sintaxis general del slice es: [inicio:fin:paso]
+
+#inicio: Índice del primer elemento que se incluirá en la rebanada (inclusive).
+#fin: Índice del elemento siguiente al último que se incluirá en la rebanada (exclusivo). Si se omite, el slice irá hasta el final de la secuencia.
+#paso: Opcional. Especifica la cantidad de elementos que se saltarán en cada paso del slice. Si no se proporciona, se asume el valor por defecto de 1.
+
+# Crear un programa que identifique si una palabra es palindromo o no
+# Ana
+# Luz Azul
+
+def palindromo(palabra):
+    palabra = palabra.lower()
+    palabra = palabra.replace(" ", "")
+
+    return palabra == palabra[::-1]
+
+def main():
+    palabra = input("Ingresa una palabra: ")
+    
+    if palindromo(palabra):
+        print("Es un palíndromo.")
+    else:
+        print("No es un palíndromo.")
+
+if __name__ == "__main__":
+    main()
